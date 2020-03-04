@@ -9,6 +9,8 @@ import urllib3.request
 
 logger = logging.getLogger(__name__)
 
+FAIL_ON_MD5_MISMATCH = False
+
 # Name of the service, as seen in the ip-groups.json file, to extract information for
 SERVICE = "CLOUDFRONT"
 # Ports your application uses that need inbound permissions from the service for
@@ -48,7 +50,9 @@ def get_ip_groups_json(url, expected_hash):
     hash = m.hexdigest()
 
     if hash != expected_hash:
-        raise Exception('MD5 Mismatch: got ' + hash + ' expected ' + expected_hash)
+        logger.warning('MD5 Mismatch: got ' + hash + ' expected ' + expected_hash)
+        if FAIL_ON_MD5_MISMATCH:
+            raise Exception('MD5 Mismatch: got ' + hash + ' expected ' + expected_hash)
 
     return ip_json
 

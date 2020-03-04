@@ -10,7 +10,7 @@
         "Signature": "EXAMPLE",
         "SigningCertUrl": "EXAMPLE",
         "MessageId": "95df01b4-ee98-5cb9-9903-4c221d41eb5e",
-        "Message": "{\"create-time\": \"yyyy-mm-ddThh:mm:ss+00:00\", \"synctoken\": \"0123456789\", \"md5\": \"c53b3826d127c2cff00c3300dd8c712c\", \"url\": \"https://ip-ranges.amazonaws.com/ip-ranges.json\"}",
+        "Message": "{\"create-time\": \"yyyy-mm-ddThh:mm:ss+00:00\", \"synctoken\": \"0123456789\", \"md5\": \"2c74413ca0718ac8e36ee4e27ea615e6\", \"url\": \"https://ip-ranges.amazonaws.com/ip-ranges.json\"}",
         "Type": "Notification",
         "UnsubscribeUrl": "EXAMPLE",
         "TopicArn": "arn:aws:sns:EXAMPLE",
